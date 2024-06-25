@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "spawnbeddisabler",
+	"version": "${version}",
+	"name": "SpawnBedDisabler",
+	"description": "Disable the respawn point setting of beds in the world >:D",
+	"authors": [
+		"Binaris",
+		"Arcane Studios"
+	],
+	"contact": {
+		"creator": "https://binaris.carrd.co"
+	},
+	"license": "MIT License",
+	"icon": "assets/spawnbeddisabler/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"binaris.spawndisabler.SpawnBedDisabler"
+		],
+		"client": [
+			"binaris.spawndisabler.SpawnBedDisablerClient"
+		]
+	},
+	"mixins": [
+		"spawnbeddisabler.mixins.json",
+		{
+			"config": "spawnbeddisabler.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
